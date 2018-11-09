@@ -1,19 +1,40 @@
 setwd("~/GitHub/snae2018")
-dir("data")
 
 library(pacman)
-p_load(matrix, tidyverse)
+p_load(tidyverse, igraph)
 
 
-df <- read.csv("data/dipcon.csv")  
+dir("data")
 
+df <- read.csv("data/dipcon.csv")
 View(df)
+##Create network onlt for 2010
 
-summary(df)
+df2010 <- df %>% 
+  filter(dipcon2010>0) %>% 
+  select(abbrev1, abbrev2)
 
-names(df)
+head(df2010)
 
-str(df)
+##Turning this into a graph object
+g2010 <- graph.data.frame(df2010, directed = T)
 
-head(df)
+plot.igraph(g2010)
+
+##Computing metrics
+df.g <- data.frame(country = V(g2010)$name, 
+                   norm_indegree = degree(g2010, mode="in", normalized = T),
+                   indegree = degree(g2010, mode="in", normalized = F))
+
+df.g <- df.g %>% 
+  arrange(-indegree)
+
+View(df.g)
+
+df.h <- data.frame(country = V(g2010)$name, 
+                   norm_outdegree = degree(g2010, mode="out", normalized = T),
+                   outdegree = degree(g2010, mode="out", normalized = F))
+
+df.h <- df.h %>%
+  arrange(-outdegree)
 
