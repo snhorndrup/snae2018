@@ -1,0 +1,19 @@
+nodedef>name VARCHAR,label VARCHAR,isSeed VARCHAR,seedRank INT,subscriberCount INT,videoCount INT,viewCount(100s) INT,country VARCHAR,publishedAt VARCHAR,daysactive INT
+UCN3iJoH8x_-rGlmj_UmKACQ,Pepe Assault,yes,1,239,1,368,not set,2016-11-10T16:11:56.000Z,732
+UCj25sfZIauiwjqITFYdO2RA,SadisticAphid60,no,,29,0,0,not set,2013-02-08T22:20:09.000Z,2102
+UC0eFJgbF3kubNGejEjI9egg,Kugee,no,,7103,134,28379,US,2013-11-22T02:15:18.000Z,1816
+UC0n9pcWWhf8BzJ9zFakcA0g,Zarathustra s Serpent,no,,8046,102,4468,not set,2016-02-05T17:06:01.000Z,1011
+UCowcNKm1w2GGw5U_XQeduhg,Jean-Francois Gariépy,no,,43658,278,39816,US,2011-04-25T00:25:35.000Z,2758
+UCA-9f9H2ydI65S8Xndz4CIw,The Best Of Burr,no,,19492,119,59153,US,2015-12-16T13:39:22.000Z,1062
+UCrTNhL_yO3tPTdQ5XgmmWjA,RedLetterMedia,no,,878178,527,3587977,US,2007-09-29T16:58:47.000Z,4062
+UChj0w0duKtp7SDd_X9CNptw,ENGINEERED TRUTH,no,,355854,265,299002,US,2011-08-01T00:27:33.000Z,2660
+UCl9s0VpZwQuvTCyZj_VtCwg,Sinatra_Says,no,,52905,342,64144,US,2016-07-25T18:24:19.000Z,840
+edgedef>node1 VARCHAR,node2 VARCHAR,directed BOOLEAN
+UCN3iJoH8x_-rGlmj_UmKACQ,UCj25sfZIauiwjqITFYdO2RA,true
+UCN3iJoH8x_-rGlmj_UmKACQ,UC0eFJgbF3kubNGejEjI9egg,true
+UCN3iJoH8x_-rGlmj_UmKACQ,UC0n9pcWWhf8BzJ9zFakcA0g,true
+UCN3iJoH8x_-rGlmj_UmKACQ,UCowcNKm1w2GGw5U_XQeduhg,true
+UCN3iJoH8x_-rGlmj_UmKACQ,UCA-9f9H2ydI65S8Xndz4CIw,true
+UCN3iJoH8x_-rGlmj_UmKACQ,UCrTNhL_yO3tPTdQ5XgmmWjA,true
+UCN3iJoH8x_-rGlmj_UmKACQ,UChj0w0duKtp7SDd_X9CNptw,true
+UCN3iJoH8x_-rGlmj_UmKACQ,UCl9s0VpZwQuvTCyZj_VtCwg,true
