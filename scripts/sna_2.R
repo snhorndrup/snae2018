@@ -24,7 +24,8 @@ plot.igraph(g2010)
 ##Computing metrics
 df.g <- data.frame(country = V(g2010)$name, 
                    norm_indegree = degree(g2010, mode="in", normalized = T),
-                   indegree = degree(g2010, mode="in", normalized = F))
+                   indegree = degree(g2010, mode="in", normalized = F),
+                   betweenness = betweenness(g, mode = "all", normalized = T, directed = F))
 
 df.g <- df.g %>% 
   arrange(-indegree)
